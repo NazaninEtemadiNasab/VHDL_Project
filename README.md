@@ -22,5 +22,12 @@ When in state 0 (ST - when irrigation is not happening), there are four possible
 - If ideal conditions are not met and humidity level is greater than 1, the system remains in state 0.
 
 When in state 1 (ST - when irrigation is happening), there are four possible scenarios as well.
+- If ideal conditions are met and humidity level is less than 7, the system remains in state 1.
+- If the humidity level is greater than or equal to 7, the system transitions from state 1 to state 0.
+- If ideal conditions are not met and humidity level is less than 3, the system remains in state 1.
+- If ideal conditions are not met and humidity level is greater than or equal to 3, the system transitions from state 1 to state 0.
+
+The output Seg when the system is in state 1 should display the LED Segment7- values, which correspond to the character 'H', and when the system is in state 0, it should display a value equivalent to '-'.
+
 
 
